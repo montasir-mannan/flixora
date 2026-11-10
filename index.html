@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090d">
+<title>FLIXORA — Entertainment Without Limits</title>
+<style>
+:root{--bg:#09090d;--panel:#14141c;--panel2:#1b1b25;--text:#f6f4f1;--muted:#a5a3ad;--gold:#d9b46b;--red:#e34b55}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.wrap{max-width:1200px;margin:auto;padding:0 22px}
+header{height:72px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12;background:#09090deF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px}.logo span{color:var(--gold)}nav{display:flex;gap:22px;color:#d7d5dc;font-size:14px}.actions{display:flex;gap:10px;align-items:center}
+button,input,select{font:inherit}.btn{border:0;border-radius:9px;padding:11px 15px;background:var(--gold);color:#16120b;font-weight:700;cursor:pointer}.btn.ghost{background:#ffffff12;color:#fff;border:1px solid #ffffff22}
+.hero{min-height:420px;display:flex;align-items:end;padding:70px 0 52px;background:linear-gradient(90deg,#09090d 0%,#09090ddd 42%,#09090d22 100%),linear-gradient(0deg,#09090d 0%,transparent 50%),radial-gradient(ellipse at 75% 25%,#73343d 0%,#272039 34%,#101019 70%);border-bottom:1px solid #ffffff12}
+.hero-content{max-width:620px}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:3px}.hero h1{font-size:clamp(38px,7vw,66px);line-height:1.02;margin:14px 0}.hero p{color:#c8c5cf;line-height:1.7;max-width:540px}.hero .btn{margin-top:12px}
+.section{padding:30px 0}.section-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:17px}.section h2{font-size:21px;margin:0}.muted{color:var(--muted);font-size:13px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.tools input,.tools select{background:var(--panel);color:#fff;border:1px solid #ffffff20;border-radius:9px;padding:12px;min-width:180px;outline:none}.tools input{flex:1}
+.categories{display:flex;gap:9px;overflow:auto;padding:4px 0 12px}.chip{white-space:nowrap;background:var(--panel);border:1px solid #ffffff18;color:#ddd;border-radius:30px;padding:9px 14px;cursor:pointer}.chip.active{background:var(--gold);color:#17120a;border-color:var(--gold);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}.card{background:var(--panel);border:1px solid #ffffff0e;border-radius:12px;overflow:hidden;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#d9b46b77}.poster{aspect-ratio:2/3;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;background:linear-gradient(145deg,#332b43,#171722 60%,#5a3037);font-weight:900;font-size:20px;letter-spacing:1px}.poster.gold{background:linear-gradient(145deg,#5c492d,#171722 65%,#7a3d3d)}.poster.blue{background:linear-gradient(145deg,#233d53,#171722 65%,#3e334f)}.card-info{padding:12px}.card-title{font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{font-size:12px;color:var(--muted);margin-top:6px}
+footer{border-top:1px solid #ffffff15;padding:28px 0;color:var(--muted);font-size:13px;margin-top:30px}.notice{background:#211d15;border:1px solid #6f5930;color:#e8d5aa;padding:13px 15px;border-radius:10px;font-size:13px;line-height:1.6;margin:22px 0}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:10;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modal-box{background:var(--panel);border:1px solid #ffffff22;border-radius:15px;max-width:520px;width:100%;padding:22px}.modal-box h2{margin-top:0}.close{float:right;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}nav{display:none}.hero{min-height:360px}}
+@media(max-width:520px){.wrap{padding:0 15px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.logo{font-size:23px}.hero{min-height:340px;padding:55px 0 35px}.hero p{font-size:14px}.actions .btn{padding:9px 10px;font-size:12px}.section h2{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+<a class="logo" href="#">FLIX<span>ORA</span></a>
+<nav><a href="#home">Home</a><a href="#movies">Movies</a><a href="#series">TV Series</a><a href="#categories">Categories</a></nav>
+<div class="actions"><button class="btn ghost" id="langBtn">বাংলা</button><button class="btn ghost" id="adminBtn">Admin</button></div>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap"><div class="hero-content">
+<div class="eyebrow">YOUR WORLD OF ENTERTAINMENT</div>
+<h1>Stories worth<br><span style="color:var(--gold)">staying in for.</span></h1>
+<p>Discover movies and series from around the world. Explore Hollywood, Bollywood, Korean, Bangla, anime and more — all in one place.</p>
+<a class="btn" href="#movies">Explore Library</a>
+</div></div></section>
+<div class="wrap">
+<div class="notice">FLIXORA is a website starter preview. Add only films, episodes, trailers or streams that you own or are legally authorized to distribute. Secure admin login and shared content storage will be connected in a later setup step.</div>
+<section class="section" id="categories"><div class="section-head"><h2>Explore Categories</h2><span class="muted">Find your next favorite</span></div>
+<div class="categories" id="chips"></div></section>
+<section class="section" id="movies"><div class="section-head"><h2>Discover</h2><span class="muted" id="count">Sample catalogue</span></div>
+<div class="tools"><input id="search" placeholder="Search movies and series…"><select id="type"><option value="All">All content</option><option>Movie</option><option>Series</option></select></div>
+<div class="grid" id="catalogue"></div>
+</section>
+</div></main>
+<footer><div class="wrap"><strong>FLIXORA</strong> — Entertainment Without Limits.<br><br>© <span id="year"></span> FLIXORA. Demo starter website.</div></footer>
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close">×</button><div class="eyebrow">FLIXORA TITLE</div><h2 id="modalTitle"></h2><p class="muted" id="modalMeta"></p><p id="modalDesc">This is a sample catalogue item. Add authorized content details when setting up your library.</p><div class="notice">No video is attached to this sample item. A legal video or trailer URL can be connected when content is added.</div></div></div>
+<script>
+const items=[
+ {title:"The Last Horizon",kind:"Movie",cat:"Hollywood Movies",year:2025,style:""},
+ {title:"City of Dreams",kind:"Movie",cat:"Bollywood Movies",year:2024,style:"gold"},
+ {title:"Seoul Nights",kind:"Series",cat:"Korean Movies & Series",year:2025,style:"blue"},
+ {title:"Nodi O Nokkhotro",kind:"Movie",cat:"Bangla Movies & Series",year:2024,style:"gold"},
+ {title:"The Silent Case",kind:"Series",cat:"Web Series",year:2025,style:""},
+ {title:"Beyond the Stars",kind:"Series",cat:"Anime",year:2025,style:"blue"},
+ {title:"Istanbul Stories",kind:"Series",cat:"Turkish & Spanish Series",year:2024,style:"gold"},
+ {title:"The Red Harbor",kind:"Movie",cat:"Hollywood Movies",year:2023,style:"blue"}
+];
+const cats=["All","Hollywood Movies","Bollywood Movies","Korean Movies & Series","Bangla Movies & Series","Web Series","Anime","Turkish & Spanish Series"];
+let active="All",lang="en";
+const chips=document.getElementById("chips"),grid=document.getElementById("catalogue");
+function renderChips(){chips.innerHTML=cats.map(c=>`<button class="chip ${active===c?'active':''}" data-cat="${c}">${c}</button>`).join("");chips.querySelectorAll("button").forEach(b=>b.onclick=()=>{active=b.dataset.cat;renderChips();render()})}
+function render(){let q=document.getElementById("search").value.toLowerCase(),t=document.getElementById("type").value;let list=items.filter(x=>(active==="All"||x.cat===active)&&(t==="All"||x.kind===t)&&(x.title.toLowerCase().includes(q)||x.cat.toLowerCase().includes(q)));document.getElementById("count").textContent=list.length+" titles";grid.innerHTML=list.map((x,i)=>`<article class="card" data-index="${items.indexOf(x)}"><div class="poster ${x.style}">${x.title}</div><div class="card-info"><div class="card-title">${x.title}</div><div class="meta">${x.kind} · ${x.year}</div></div></article>`).join("");grid.querySelectorAll(".card").forEach(c=>c.onclick=()=>openItem(items[+c.dataset.index]))}
+function openItem(x){document.getElementById("modalTitle").textContent=x.title;document.getElementById("modalMeta").textContent=x.kind+" · "+x.cat+" · "+x.year;document.getElementById("modal").classList.add("show")}
+document.getElementById("search").addEventListener("input",render);document.getElementById("type").addEventListener("change",render);document.getElementById("close").onclick=()=>document.getElementById("modal").classList.remove("show");document.getElementById("modal").onclick=e=>{if(e.target.id==="modal")e.currentTarget.classList.remove("show")};
+document.getElementById("adminBtn").onclick=()=>alert("Secure Admin Login will be connected in a later step using Supabase Auth. This preview does not contain a public admin password.");
+document.getElementById("langBtn").onclick=()=>{lang=lang==="en"?"bn":"en";document.getElementById("langBtn").textContent=lang==="en"?"বাংলা":"English";document.querySelector(".eyebrow").textContent=lang==="en"?"YOUR WORLD OF ENTERTAINMENT":"বিনোদনের নতুন দুনিয়া";document.querySelector(".hero h1").innerHTML=lang==="en"?'Stories worth<br><span style="color:var(--gold)">staying in for.</span>':'আপনার পছন্দের<br><span style="color:var(--gold)">বিনোদনের ঠিকানা।</span>';document.querySelector(".hero p").textContent=lang==="en"?"Discover movies and series from around the world. Explore Hollywood, Bollywood, Korean, Bangla, anime and more — all in one place.":"বিশ্বের নানা দেশের সিনেমা ও সিরিজ খুঁজে নিন এক জায়গায়।";document.getElementById("search").placeholder=lang==="en"?"Search movies and series…":"সিনেমা ও সিরিজ খুঁজুন…"};
+document.getElementById("year").textContent=new Date().getFullYear();renderChips();render();
+</script>
+</body>
+</html>
