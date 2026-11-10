@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09090d">
+<title>FLIXORA — Entertainment Without Limits</title>
+<style>
+:root{--bg:#09090d;--panel:#14141c;--panel2:#1c1c27;--text:#f7f5f2;--muted:#a6a3ad;--gold:#e8bd62;--red:#e5484d;--line:#292936}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.top{position:sticky;top:0;z-index:5;background:#09090deF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{max-width:1200px;margin:auto;padding:15px 20px;display:flex;align-items:center;gap:18px}.logo{font-size:25px;font-weight:950;letter-spacing:2px;color:var(--gold)}.logo span{color:var(--red)}.tag{font-size:10px;color:var(--muted);letter-spacing:2px}.spacer{flex:1}.nav button,.btn{border:0;border-radius:9px;padding:10px 15px;background:var(--red);color:white;font-weight:750}.nav .ghost,.ghost{background:var(--panel2);border:1px solid var(--line)}.hero{max-width:1200px;margin:22px auto 0;padding:50px 24px 42px;background:linear-gradient(90deg,#09090df2,#09090d77),radial-gradient(circle at 80% 30%,#6c2636,#171522 55%,#09090d);border:1px solid var(--line);border-radius:18px}.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;font-weight:800}.hero h1{font-size:clamp(34px,7vw,66px);line-height:1.02;margin:12px 0;max-width:700px}.hero p{color:#d1ccd2;max-width:540px;line-height:1.6}.wrap{max-width:1200px;margin:auto;padding:22px 20px 70px}.tools{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 24px}.tools input,.tools select,.field{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:12px;min-width:0}.tools input{flex:1;min-width:190px}.tools select{min-width:145px}.sectionhead{display:flex;align-items:center;justify-content:space-between;margin:24px 0 14px}.sectionhead h2{font-size:20px;margin:0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:16px}.movie{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}.poster{aspect-ratio:2/3;background:linear-gradient(145deg,#302c38,#17151d);display:flex;align-items:center;justify-content:center;color:#817b8a;font-size:13px;text-align:center;padding:12px;background-size:cover;background-position:center}.moviebody{padding:11px}.movie h3{font-size:14px;margin:0 0 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{font-size:11px;color:var(--muted)}.empty{padding:34px;text-align:center;border:1px dashed var(--line);border-radius:12px;color:var(--muted)}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;padding:16px;z-index:10}.modal.show{display:flex}.dialog{width:min(560px,100%);max-height:90vh;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.dialog h2{margin:0 0 16px}.fieldwrap{display:grid;gap:6px;margin:12px 0}.fieldwrap label{font-size:12px;color:var(--muted)}.field{width:100%}textarea.field{min-height:90px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.status{font-size:12px;color:var(--gold);min-height:18px}.adminpanel{display:none;margin:20px 0;padding:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.adminpanel.show{display:block}.adminhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.adminhead h2{margin:0}.adminform{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:15px}.adminform .full{grid-column:1/-1}.itemrow{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding:11px 0;font-size:13px}.smallbtn{padding:7px 10px;border-radius:7px;border:1px solid var(--line);background:var(--panel2);color:white}.danger{background:#64252a}.hidden{display:none!important}footer{text-align:center;color:var(--muted);font-size:12px;padding:28px;border-top:1px solid var(--line)}
+@media(max-width:600px){.nav{padding:12px}.logo{font-size:21px}.tag{display:none}.hero{margin:12px 12px 0;padding:35px 20px}.wrap{padding:18px 12px 55px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.adminform{grid-template-columns:1fr}.adminform .full{grid-column:auto}.nav button{padding:9px 11px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="nav"><div><div class="logo">FLIX<span>ORA</span></div><div class="tag">ENTERTAINMENT WITHOUT LIMITS</div></div><div class="spacer"></div><button class="ghost" id="langBtn">বাংলা</button><button id="adminOpen">Admin Login</button></div></header>
+<section class="hero"><div class="eyebrow">YOUR CINEMA. YOUR WORLD.</div><h1>Stories worth staying up for.</h1><p>Discover movies, series and anime in one place. Explore the FLIXORA collection.</p></section>
+<main class="wrap">
+<div class="tools"><input id="search" type="search" placeholder="Search movies, series..."><select id="typeFilter"><option value="">All types</option><option value="movie">Movies</option><option value="series">Series</option><option value="anime">Anime</option></select><select id="categoryFilter"><option value="">All categories</option><option>Hollywood</option><option>Bollywood</option><option>Korean</option><option>Bangla</option><option>Turkish</option><option>Spanish</option><option>Web Series</option><option>Anime</option></select></div>
+<section id="adminPanel" class="adminpanel"><div class="adminhead"><h2>FLIXORA Admin Dashboard</h2><div class="spacer"></div><span class="muted" id="adminEmail"></span><button class="ghost" id="logoutBtn">Log out</button></div>
+<p class="muted">Add catalogue details and a video link you own or are licensed to distribute. This form does not upload video files.</p>
+<form id="titleForm" class="adminform">
+<div class="fieldwrap"><label>Title *</label><input class="field" id="fTitle" required maxlength="160"></div>
+<div class="fieldwrap"><label>Content type *</label><select class="field" id="fType"><option value="movie">Movie</option><option value="series">Series</option><option value="anime">Anime</option></select></div>
+<div class="fieldwrap"><label>Category</label><input class="field" id="fCategory" placeholder="e.g. Korean"></div>
+<div class="fieldwrap"><label>Release year</label><input class="field" id="fYear" type="number" min="1888" max="2100"></div>
+<div class="fieldwrap full"><label>Poster image URL</label><input class="field" id="fPoster" type="url" placeholder="https://..."></div>
+<div class="fieldwrap full"><label>Authorized video / embed URL</label><input class="field" id="fVideo" type="url" placeholder="https://..."></div>
+<div class="fieldwrap full"><label>Description</label><textarea class="field" id="fDescription"></textarea></div>
+<div class="fieldwrap full"><label><input type="checkbox" id="fPublished"> Publish this title for visitors</label></div>
+<div class="full actions"><button class="btn" type="submit">Save title</button><button class="ghost" type="reset">Clear form</button></div>
+</form><div class="status" id="adminStatus"></div><h3>Manage titles</h3><div id="manageList"></div></section>
+<div class="sectionhead"><h2>Explore FLIXORA</h2><span class="muted" id="count">Loading…</span></div><div id="catalogue" class="grid"></div>
+</main><footer>FLIXORA · Entertainment Without Limits</footer>
+<div class="modal" id="loginModal"><div class="dialog"><div class="adminhead"><h2>Admin Login</h2><div class="spacer"></div><button class="smallbtn" id="closeLogin">✕</button></div><p class="muted">Sign in with the admin account created in Supabase.</p><form id="loginForm"><div class="fieldwrap"><label>Email</label><input class="field" id="loginEmail" type="email" required autocomplete="username"></div><div class="fieldwrap"><label>Password</label><input class="field" id="loginPassword" type="password" required autocomplete="current-password"></div><div class="actions"><button class="btn" type="submit">Sign in</button></div></form><div class="status" id="loginStatus"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const SUPABASE_URL = "https://ohrcmvhhijjwbqjzshzn.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_d2_2ViVuQaJ381cYqLBN_A_WQlj0dEL";
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+let titles = [], isAdmin = false, editingId = null;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function showStatus(id,msg){$(id).textContent=msg;}
+async function loadTitles(){
+  const {data,error}=await db.from("titles").select("*").eq("is_published",true).order("created_at",{ascending:false});
+  if(error){$("catalogue").innerHTML='<div class="empty">Could not load titles. Please refresh later.</div>'; $("count").textContent=""; return;}
+  titles=data||[]; renderTitles();
+}
+function renderTitles(){
+  const q=$("search").value.toLowerCase().trim(), type=$("typeFilter").value, cat=$("categoryFilter").value.toLowerCase();
+  const list=titles.filter(t=>(!q||t.title.toLowerCase().includes(q)||(t.description||"").toLowerCase().includes(q))&&(!type||t.content_type===type)&&(!cat||(t.category||"").toLowerCase()===cat));
+  $("count").textContent=list.length+" titles";
+  $("catalogue").innerHTML=list.length?list.map(t=>`<article class="movie"><div class="poster" ${t.poster_url?`style="background-image:url('${esc(t.poster_url).replace(/'/g,"%27")}')"`:""}>${t.poster_url?"": "FLIXORA"}</div><div class="moviebody"><h3>${esc(t.title)}</h3><div class="meta">${esc(t.category||t.content_type)}${t.release_year?" · "+esc(t.release_year):""}</div>${t.description?`<p class="meta">${esc(t.description)}</p>`:""}${t.video_url?`<a href="${esc(t.video_url)}" target="_blank" rel="noopener noreferrer" class="meta">Watch / Open ↗</a>`:""}</div></article>`).join(""):'<div class="empty" style="grid-column:1/-1">No titles found yet. Check back soon.</div>';
+}
+async function refreshAdmin(){
+ const {data:{user}}=await db.auth.getUser();
+ if(!user){isAdmin=false;$("adminPanel").classList.remove("show");return;}
+ const {data:ok,error}=await db.rpc("is_admin");
+ if(error||ok!==true){isAdmin=false;$("adminPanel").classList.remove("show");showStatus("loginStatus","This account does not have admin permission.");return;}
+ isAdmin=true;$("adminEmail").textContent=user.email||"";$("adminPanel").classList.add("show");$("loginModal").classList.remove("show");await loadManage();
+}
+async function loadManage(){
+ const {data,error}=await db.from("titles").select("*").order("created_at",{ascending:false});
+ if(error){$("manageList").textContent="Could not load admin list.";return;}
+ $("manageList").innerHTML=(data||[]).map(t=>`<div class="itemrow"><div><strong>${esc(t.title)}</strong><div class="meta">${esc(t.content_type)} · ${t.is_published?"Published":"Draft"}</div></div><div><button class="smallbtn" onclick="editTitle('${t.id}')">Edit</button> <button class="smallbtn danger" onclick="deleteTitle('${t.id}')">Delete</button></div></div>`).join("")||'<p class="muted">No titles added yet.</p>';
+}
+window.editTitle=async id=>{if(!isAdmin)return;const t=titlesAdminCache.find(x=>x.id===id);if(!t){const {data}=await db.from("titles").select("*").eq("id",id).single();if(data)fillForm(data);return;}fillForm(t);};
+let titlesAdminCache=[];
+async function loadManage(){
+ const {data,error}=await db.from("titles").select("*").order("created_at",{ascending:false});
+ if(error){$("manageList").textContent="Could not load admin list.";return;}
+ titlesAdminCache=data||[];
+ $("manageList").innerHTML=titlesAdminCache.map(t=>`<div class="itemrow"><div><strong>${esc(t.title)}</strong><div class="meta">${esc(t.content_type)} · ${t.is_published?"Published":"Draft"}</div></div><div><button class="smallbtn" onclick="editTitle('${t.id}')">Edit</button> <button class="smallbtn danger" onclick="deleteTitle('${t.id}')">Delete</button></div></div>`).join("")||'<p class="muted">No titles added yet.</p>';
+}
+function fillForm(t){editingId=t.id;$("fTitle").value=t.title||"";$("fType").value=t.content_type||"movie";$("fCategory").value=t.category||"";$("fYear").value=t.release_year||"";$("fPoster").value=t.poster_url||"";$("fVideo").value=t.video_url||"";$("fDescription").value=t.description||"";$("fPublished").checked=!!t.is_published;window.scrollTo({top:$("adminPanel").offsetTop-70,behavior:"smooth"});showStatus("adminStatus","Editing: "+t.title);}
+window.deleteTitle=async id=>{if(!isAdmin||!confirm("Delete this title?"))return;const {error}=await db.from("titles").delete().eq("id",id);if(error){showStatus("adminStatus",error.message);return;}showStatus("adminStatus","Title deleted.");await loadManage();await loadTitles();};
+$("titleForm").addEventListener("submit",async e=>{e.preventDefault();if(!isAdmin)return;
+ const row={title:$("fTitle").value.trim(),content_type:$("fType").value,category:$("fCategory").value.trim()||null,release_year:$("fYear").value?Number($("fYear").value):null,poster_url:$("fPoster").value.trim()||null,video_url:$("fVideo").value.trim()||null,description:$("fDescription").value.trim()||null,is_published:$("fPublished").checked};
+ const result=editingId?await db.from("titles").update(row).eq("id",editingId):await db.from("titles").insert(row);
+ if(result.error){showStatus("adminStatus","Save failed: "+result.error.message);return;}
+ editingId=null;$("titleForm").reset();showStatus("adminStatus","Saved successfully.");await loadManage();await loadTitles();
+});
+$("adminOpen").onclick=()=>{$("loginModal").classList.add("show");showStatus("loginStatus","");};
+$("closeLogin").onclick=()=>$("loginModal").classList.remove("show");
+$("loginModal").onclick=e=>{if(e.target===$("loginModal"))$("loginModal").classList.remove("show");};
+$("loginForm").addEventListener("submit",async e=>{e.preventDefault();showStatus("loginStatus","Signing in…");const {error}=await db.auth.signInWithPassword({email:$("loginEmail").value.trim(),password:$("loginPassword").value});if(error){showStatus("loginStatus",error.message);return;}await refreshAdmin();});
+$("logoutBtn").onclick=async()=>{await db.auth.signOut();isAdmin=false;$("adminPanel").classList.remove("show");showStatus("loginStatus","Signed out.");};
+$("search").addEventListener("input",renderTitles);$("typeFilter").addEventListener("change",renderTitles);$("categoryFilter").addEventListener("change",renderTitles);
+$("langBtn").onclick=()=>{const b=$("langBtn");b.textContent=b.textContent==="বাংলা"?"English":"বাংলা";alert(b.textContent==="English"?"বাংলা ভাষা সংস্করণ পরবর্তী আপডেটে যুক্ত করা হবে।":"English version selected.");};
+db.auth.onAuthStateChange(()=>{setTimeout(refreshAdmin,0);});
+loadTitles();refreshAdmin();
+</script>
+</body>
+</html>
